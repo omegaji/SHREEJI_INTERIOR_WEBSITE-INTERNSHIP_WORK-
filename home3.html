@@ -1,0 +1,163 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <title>Responsive Native WordPress Gallery</title>
+</head>
+<body>
+  <h2>Gallery 2 Columns</h2>
+<style media="screen">
+  /* From normalize.css */
+ * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+img {
+    width: auto;
+    height: auto;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+}
+img, embed, object, video {
+    max-width: 100%;
+}
+/* end normalize.css */
+
+.gallery {
+    margin-left: -21px;
+    margin-bottom: 21px;
+    margin-bottom: 1.5rem;
+}
+.ie8 .gallery {
+    margin-left: 0;
+  background:red;
+}
+.gallery-item {
+    position: relative;
+    float: left;
+    text-align: center;
+    margin: 0 0 21px;
+    margin: 0 0 1.5rem;
+    padding: 21px;
+    padding: 1.5rem;
+    border: 0 solid rgba(0, 0, 0, 0);
+    border-left-width: 21px;
+    border-left-width: 1.5rem;
+}
+
+.ie8 .gallery-item {
+  padding: 0 21px;
+}
+
+.gallery-item:before {
+    position: absolute;
+    content:"";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #ccc;
+    z-index: -1;
+}
+.gallery-item img {
+    border: 1px solid #ccc;
+}
+.gallery-item a {
+    position: relative;
+    z-index: 1000;
+}
+.gallery-columns-1 > .gallery-item {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+.gallery-columns-2 > .gallery-item {
+    width: 50%;
+}
+.gallery-columns-3 > .gallery-item {
+    width: 33.333%;
+}
+.gallery-columns-4 > .gallery-item {
+    width: 25%;
+}
+.gallery-columns-5 > .gallery-item {
+    width: 20%;
+}
+.gallery-columns-2 > .gallery-item:nth-of-type(2n + 1), .gallery-columns-3 > .gallery-item:nth-of-type(3n + 1), .gallery-columns-4 > .gallery-item:nth-of-type(4n + 1), .gallery-columns-5 > .gallery-item:nth-of-type(5n + 1) {
+    margin-left: 0;
+}
+.gallery-columns-2 > .gallery-item:nth-of-type(2n), .gallery-columns-3 > .gallery-item:nth-of-type(3n), .gallery-columns-4 > .gallery-item:nth-of-type(4n), .gallery-columns-5 > .gallery-item:nth-of-type(5n) {
+    margin-right: 0;
+}
+.ie8 .gallery-columns-2 > .gallery-item {
+    width: 49%;
+}
+.ie8 .gallery-columns-3 > .gallery-item {
+    width: 32.3%;
+}
+.ie8 .gallery-columns-4 > .gallery-item {
+    width: 24%;
+}
+.ie8 .gallery-columns-5 > .gallery-item {
+    width: 19%;
+}
+.gallery-caption {
+    font-size: 14px;
+    font-size: .875rem;
+    /* 14px / 16 = .875 */
+    margin-left: 0;
+    padding: 8px 0;
+    padding: .75em 0 0;
+}
+.gallery-caption > :last-child {
+    margin-bottom: 0;
+}
+</style>
+<div class="gallery gallery-columns-2 cf">
+    <dl class="gallery-item">
+        <dt class="gallery-icon">
+		    <a href="javascript:void(0);">
+                <img src="http://placekitten.com/g/700/700" />
+            </a>
+        </dt>
+
+        <dd class="gallery-caption">caption</dd>
+    </dl>
+    <dl class="gallery-item">
+        <dt class="gallery-icon">
+			<a href="javascript:void(0);">
+                <img src="http://placekitten.com/g/700/700" />
+            </a>
+		</dt>
+        <dd class="gallery-caption">caption</dd>
+    </dl>
+    <br style="clear: both">
+    <!-- displayed after every 2 items in gallery -->
+    <dl class="gallery-item">
+        <dt class="gallery-icon">
+			<a href="javascript:void(0);">
+                <img src="http://placekitten.com/g/700/700" />
+            </a>
+		</dt>
+        <dd class="gallery-caption">caption</dd>
+    </dl>
+    <dl class="gallery-item">
+        <dt class="gallery-icon">
+			<a href="javascript:void(0);">
+                <img src="http://placekitten.com/g/700/700" />
+            </a>
+        </dt>
+        <dd class="gallery-caption">caption</dd>
+    </dl>
+    <br style="clear: both">
+    <!-- displayed after every 2 items in gallery -->
+</div>
+
+</body>
+</html>
